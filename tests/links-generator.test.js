@@ -1,6 +1,6 @@
 const path = require("path");
 const { generateESModule, generateCommonJSModule } = require("../lib/util");
-const generator = require("../lib/generator");
+const generate = require("../lib/links-generator");
 
 const fixtures = path.resolve(__dirname, "fixtures");
 
@@ -9,7 +9,7 @@ function fixture(f) {
 }
 
 it("app1. no pages", async (done) => {
-    const links = await generator(fixture("app1"), false);
+    const links = await generate(fixture("app1"), false);
     expect(links).toMatchSnapshot();
     expect(generateESModule(links)).toMatchSnapshot();
     expect(generateCommonJSModule(links)).toMatchSnapshot();
@@ -17,7 +17,7 @@ it("app1. no pages", async (done) => {
 });
 
 it("app2", async (done) => {
-    const links = await generator(fixture("app2"), false);
+    const links = await generate(fixture("app2"), false);
     expect(links).toMatchSnapshot();
     expect(generateESModule(links)).toMatchSnapshot();
     expect(generateCommonJSModule(links)).toMatchSnapshot();
@@ -25,7 +25,7 @@ it("app2", async (done) => {
 });
 
 it("app3", async (done) => {
-    const links = await generator(fixture("app3"), false);
+    const links = await generate(fixture("app3"), false);
     expect(links).toMatchSnapshot();
     expect(generateESModule(links)).toMatchSnapshot();
     expect(generateCommonJSModule(links)).toMatchSnapshot();
