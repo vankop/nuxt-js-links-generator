@@ -1,0 +1,39 @@
+{
+  "name": "nuxt-js-links-generator",
+  "version": "0.1.0",
+  "description": "nuxt.js/next.js links helper",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vankop/nuxt-js-links-generator.git"
+  },
+  "keywords": [
+    "Nuxt.js",
+    "Next.js"
+  ],
+  "bin": {
+    "nuxt-js-links-generator": "./bin/cli.js"
+  },
+  "files": [
+    "lib",
+    "bin",
+    "LICENSE",
+    "README.md"
+  ],
+  "author": "Ivan Kopeykin (ivan.kopeykin@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vankop/nuxt-js-links-generator/issues"
+  },
+  "homepage": "https://github.com/vankop/nuxt-js-links-generator#readme",
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "prepublishOnly": "npm run test"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
