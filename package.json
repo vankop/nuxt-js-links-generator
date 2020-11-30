@@ -1,6 +1,6 @@
 {
   "name": "nuxt-js-links-generator",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "nuxt.js/next.js links helper",
   "main": "lib/index.js",
   "repository": {
@@ -31,6 +31,7 @@
   },
   "scripts": {
     "test": "jest",
+    "test:update": "jest -u",
     "prepublishOnly": "npm run test"
   },
   "devDependencies": {
